@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceylon Delights</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .full-photo-section {
+      position: relative;
+      text-align: center;
+      margin: 0 auto 40px;
+      max-width: 1200px;
+    }
+    .full-photo-section img {
+      width: 100%;
+      display: block;
+      height: auto;
+      filter: brightness(0.5);
+    }
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 30px;
+      max-width: 800px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    }
+    .overlay-text h2 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+      color: #ffd54f;
+      border-bottom: 5px solid #ffa000;
+      display: inline-block;
+    }
+    .overlay-text p.date {
+      font-style: italic;
+      margin-bottom: 1.5em;
+      color: #eee;
+    }
+    .overlay-text h3 {
+      font-size: 1.6rem;
+      color: #ffa726;
+      margin: 1em 0 0.3em;
+    }
+    .overlay-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1em;
+    }
+    @media (max-width: 600px) {
+      .overlay-text h2 { font-size: 2rem; }
+      .overlay-text h3 { font-size: 1.3rem; }
+      .overlay-text p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Single Image Section Covering All Text -->
+  <div class="full-photo-section">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/02/0f/a2/decorated-with-sri-lankan.jpg?w=900&h=500&s=1" alt="Ceylon Delights restaurant ambiance">
+    <div class="overlay-text">
+      <h2>Ceylon Delights</h2>
+      <p class="date">Established circa 2023</p>
+
+      <h3>About Us</h3>
+      <p>Founded during around 2023, Ceylon Delights preserves Sri Lanka’s culinary traditions with time‑honored family recipes, fresh local ingredients, and warm island hospitality.</p>
+
+      <h3>Vision</h3>
+      <p>To become the leading destination for authentic Sri Lankan cuisine—celebrating our rich heritage and vibrant culture with guests from across the globe.</p>
+
+      <h3>Mission</h3>
+      <p>We strive to delight every guest with flavorful, handcrafted dishes served in a welcoming atmosphere that reflects the spirit of Sri Lankan hospitality.</p>
+    </div>
+  </div>
+
+</body>
+</html>

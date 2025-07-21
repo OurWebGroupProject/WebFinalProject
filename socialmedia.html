@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Ceylon Delights – Connect With Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     background: linear-gradient(135deg, #ff6b35, #d84315, #d84644);
+    }
+    .page {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 {
+      margin-bottom: 1.2rem;
+      font-size: 2.2rem;
+      color: #222;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+    .icons a {
+      position: relative;
+      display: inline-block;
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform .2s;
+    }
+    .icons a img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .icons a:hover {
+      transform: scale(1.15);
+    }
+    .icons a::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: -2.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-size: .85rem;
+      padding: .4rem .75rem;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s, bottom .2s;
+      white-space: nowrap;
+    }
+    .icons a:hover::after {
+      opacity: 1;
+      bottom: -3.2rem;
+    }
+    .details {
+      font-size: .95rem;
+      color: #444;
+      line-height: 1.6;
+      text-align: left;
+    }
+    .details b { color: #222; }
+    .details a {
+      color: #1877F2;
+      text-decoration: none;
+    }
+    .details a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Ceylon Delights</h1>
+    <div class="icons">
+      <a href="https://www.facebook.com/ceylondelights4u" target="_blank" data-title="Facebook: @ceylondelights4u">
+        <img src="images/facebook.jpg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/ceylondelightss/" target="_blank" data-title="Instagram: @ceylondelightss">
+        <img src="images/ins.jpg" alt="Instagram">
+      </a>
+      <a href="https://linkedin.com/company/Ceylon-Delights-Fake" target="_blank" data-title="LinkedIn: Ceylon Delights">
+        <img src="images/link.jpg" alt="LinkedIn">
+      </a>
+    </div>
+    <div class="details">
+      <p><b>Facebook:</b> Real updates—daily specials, events & reviews!</p>
+      <p><b>Instagram:</b> Authentic food shots and behind‑the‑scenes reels!</p>
+      <p><b>LinkedIn:</b> Our story, team insights, and career information.</p>
+      <p>© 2025 Ceylon Delights — All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

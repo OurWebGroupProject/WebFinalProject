@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Ceylon Delights</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .slideshow-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: slideShow 16s infinite;
+    }
+
+    .slide:nth-child(1) {
+      background-image: url('images/food5.jpg');
+      opacity: 1;
+      animation-delay: 0s;
+    }
+
+    .slide:nth-child(2) {
+      background-image: url('images/food6.jpg');
+      animation-delay: 4s;
+    }
+
+    .slide:nth-child(3) {
+      background-image: url('images/food1.jpg');
+      animation-delay: 8s;
+    }
+
+      .slide:nth-child(4) {
+      background-image: url('images/food3.jpg');
+      animation-delay: 12s;
+    }
+	
+    @keyframes slideShow {
+      0% { opacity: 1; }
+      33.33% { opacity: 1; }
+      41.66% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(135deg, #000000, #800000, #ff6b35);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+	
+	.flag {
+  display: flex;
+  align-items: center;
+}
+
+.flag img {
+  height: 50px;
+  width: auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+    .oderbtn {
+      text-align: center;
+      margin-top: 150px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .oderbtn h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .oderbtn button {
+      padding: 15px 30px;
+      font-size: 22px;
+      background: linear-gradient(135deg, #ff6b35, #d84315);
+      border: none;
+      border-radius: 7px;
+      color: white;
+      cursor: hand;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .oderbtn button:hover {
+      background: linear-gradient(135deg, #ff5722, #bf360c);
+      transform: translateY(-2px);
+	   box-shadow: 0 12px 40px rgba(255, 107, 53, 0.6);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1a1a1a, #8b0000, #ff4500);
+      color: #ecf0f1;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
+      margin-top: 200px;
+    }
+
+    .branch-box {
+      background: linear-gradient(-135deg, #2c2c2c, #800020, #ff6347);
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+    }
+    
+    .branch-box:hover {
+      background-color: #3f5870;
+    }
+
+    .branch-box h3 {
+      margin-top: 0;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ecf0f1;
+      padding-bottom: 6px;
+    }
+
+    .branch-box p {
+      margin: 5px 0;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    .branch-box a {
+      color: #a3d2ca;
+      text-decoration: none;
+    }
+
+    .branch-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slideshow Background -->
+  <div class="slideshow-background">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+	<div class="slide"></div>
+  </div>
+  
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    
+    <nav>
+      <a href="aboutsl.html">About Sri Lankan Cuisine</a>
+      <a href="menu.html">Restaurant Menu</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="aboutus.html">About Us</a>
+	  <a href="socialmedia.html">Social media</a>
+    </nav>
+	<div class="flag">
+   <img src="images/srilankanflag.png" alt="Sri Lankan Flag">
+ </div>
+  </header>
+
+  <!-- Main Section -->
+  <div class="oderbtn">
+    <h1>Welcome to Ceylon Delights!</h1>
+    <a href="order.html"><button>Place Your Order Online</button></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="branch-box">
+      <h3>Tokyo - Shinjuku</h3>
+      <p>Address: 1-2-3 Shinjuku, Tokyo 160-0022</p>
+      <p>Phone: +81 0 1234 5678</p>
+      <p><a href="https://maps.google.com/?q=1-2-3+Shinjuku,+Tokyo" target="_blank" rel="noopener noreferrer">View on Map</a></p>
+    </div>
+
+    <div class="branch-box">
+      <h3>Osaka - Namba</h3>
+      <p>Address: 4-5-6 Namba, Osaka 542-0076</p>
+      <p>Phone: +81 0 1234 5678</p>
+      <p><a href="https://maps.google.com/?q=4-5-6+Namba,+Osaka" target="_blank" rel="noopener noreferrer">View on Map</a></p>
+    </div>
+
+    <div class="branch-box">
+      <h3>Kyoto - Gion</h3>
+      <p>Address:  Gion, Kyoto 605-0074</p>
+      <p>Phone: +81 0 1234 5678</p>
+      <p><a href="https://maps.google.com/?q=7-8-9+Gion,+Kyoto" target="_blank" rel="noopener noreferrer">View on Map</a></p>
+    </div>
+
+    <div class="branch-box">
+      <h3>Fukuoka - Hakata</h3>
+      <p>Address: 10-11-12 Hakata, Fukuoka 812-0012</p>
+      <p>Phone: +81 0 1234 5678</p>
+      <p><a href="https://maps.google.com/?q=10-11-12+Hakata,+Fukuoka" target="_blank" rel="noopener noreferrer">View on Map</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
